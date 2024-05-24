@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { StatusBar, BackHandler } from "react-native";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, BackHandler, StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import WebView from "react-native-webview";
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
         style={{ flex: 1 }}
         onNavigationStateChange={(navState) => setCanGoBack(navState.canGoBack)}
       />
-      <StatusBar />
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
